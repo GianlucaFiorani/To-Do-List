@@ -29,6 +29,12 @@ li {
   border-color: #d1d1d1d0;
   font-size: 4rem;
   margin: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+ul {
+  padding-left: 0;
 }
 
 button {
@@ -48,6 +54,10 @@ button {
   box-shadow: 2px 2px 10px rgb(169, 169, 169);
 }
 
+button:hover {
+  background-color: #bf2f16;
+}
+
 header {
   padding: 1.5rem;
 }
@@ -59,6 +69,7 @@ header {
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 10px 10px 10px rgb(169, 169, 169);
+  overflow: hidden;
 }
 
 input[type="text"] {
@@ -83,4 +94,33 @@ input[type="text"]:hover {
 
 .barrato {
   text-decoration: line-through;
+}
+
+@media screen and (max-width: 769px) {
+  h1 {
+    font-size: 3.5em;
+  }
+  input[type="text"] {
+    font-size: 2rem;
+  }
+  li {
+    font-size: 3rem;
+  }
+  #checkBox {
+    margin: 0.7rem 1.2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  input[type="text"] {
+    font-size: 1.3rem;
+  }
+  li {
+    font-size: 2rem;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  input[type="text"] {
+    width: -webkit-fill-available;
+  }
 }
